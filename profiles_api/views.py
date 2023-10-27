@@ -111,10 +111,6 @@ class UserProfileViewSet(viewsets.ModelViewSet):
     queryset = models.UserProfile.objects.all()
     authentication_classes = (TokenAuthentication,)
     permission_clases = (permissions.UpdateOwnProfile,)
-
-class UserProfileViewSet(viewsets.ModelViewSet):
-    """Handle creating, creating and updating profiles"""
-    ...
     filter_backends = (filters.SearchFilter,)
     search_fields = ('name', 'email',)
 
